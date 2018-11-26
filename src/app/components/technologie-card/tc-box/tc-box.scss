@@ -1,0 +1,220 @@
+$animation-time: 7s;
+$animation-type: ease-out;
+@keyframes tc-top-line-from-left {
+    0% {
+        left: 0;
+        width: 0;
+    }
+    25%,
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes tc-top-line-from-right {
+    0% {
+        right: 0;
+        width: 0;
+    }
+    25%,
+    100% {
+        right: 0;
+        width: 100%;
+    }
+}
+
+@keyframes tc-bottom-line-from-left {
+    0% {
+        left: 0;
+        width: 0;
+    }
+    25%,
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes tc-bottom-line-from-right {
+    0% {
+        right: 0;
+        width: 0;
+    }
+    25%,
+    100% {
+        right: 0;
+        width: 100%;
+    }
+}
+
+@keyframes tc-left-line-from-top {
+    0% {
+        top: 0;
+        height: 0;
+    }
+    25%,
+    100% {
+        top: 0;
+        height: 100%;
+    }
+}
+
+@keyframes tc-left-line-from-bottom {
+    0% {
+        bottom: 0;
+        height: 0;
+    }
+    25%,
+    100% {
+        bottom: 0;
+        height: 100%;
+    }
+}
+
+@keyframes tc-right-line-from-top {
+    0% {
+        top: 0;
+        height: 0;
+    }
+    25%,
+    100% {
+        top: 0;
+        height: 100%;
+    }
+}
+
+@keyframes tc-right-line-from-bottom {
+    0% {
+        bottom: 0;
+        height: 0;
+    }
+    25%,
+    100% {
+        bottom: 0;
+        height: 100%;
+    }
+}
+
+@keyframes tc-circle-zoom {
+    0% {
+        width: 24px;
+        height: 24px;
+        border-width: 0px;
+        opacity: 0;
+        background-color: white;
+    }
+    1% {
+        border-width: 1px;
+        background-color: white;
+    }
+    8% {
+        opacity: 1;
+    }
+    100% {
+        width: 24px;
+        height: 24px;
+        border-width: 1px;
+        background-color: white;
+    }
+}
+
+tc-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .tc-top-line {
+        position: absolute;
+        top: 0;
+        border-top: 1px solid white;
+    }
+    .tc-left-line {
+        position: absolute;
+        left: 0;
+        border-left: 1px solid white;
+    }
+    .tc-right-line {
+        position: absolute;
+        right: 0;
+        border-right: 1px solid white;
+    }
+    .tc-bottom-line {
+        position: absolute;
+        bottom: 0;
+        border-bottom: 1px solid white;
+    }
+    .tc-circle {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border: 0px solid white;
+        border-radius: 50%;
+        z-index: 9;
+        &.tc-circle-top-left {
+            top: 0;
+            left: 0;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        &.tc-circle-top-right {
+            top: 0;
+            right: 0;
+            transform: translateX(50%) translateY(-50%);
+        }
+        &.tc-circle-bottom-left {
+            bottom: 0;
+            left: 0;
+            transform: translateX(-50%) translateY(50%);
+        }
+        &.tc-circle-bottom-right {
+            bottom: 0;
+            right: 0;
+            transform: translateX(50%) translateY(50%);
+        }
+    }
+    &.top-left-animate {
+        .tc-top-line {
+            animation: tc-top-line-from-left $animation-time $animation-type;
+        }
+        .tc-left-line {
+            animation: tc-left-line-from-top $animation-time $animation-type;
+        }
+        .tc-circle-top-left {
+            animation: tc-circle-zoom $animation-time $animation-type;
+        }
+    }
+    &.top-right-animate {
+        .tc-top-line {
+            animation: tc-top-line-from-right $animation-time $animation-type;
+        }
+        .tc-right-line {
+            animation: tc-right-line-from-top $animation-time $animation-type;
+        }
+        .tc-circle-top-right {
+            animation: tc-circle-zoom $animation-time $animation-type;
+        }
+    }
+    &.bottom-left-animate {
+        .tc-bottom-line {
+            animation: tc-bottom-line-from-left $animation-time $animation-type;
+        }
+        .tc-left-line {
+            animation: tc-left-line-from-bottom $animation-time $animation-type;
+        }
+        .tc-circle-bottom-left {
+            animation: tc-circle-zoom $animation-time $animation-type;
+        }
+    }
+    &.bottom-right-animate {
+        .tc-bottom-line {
+            animation: tc-bottom-line-from-right $animation-time $animation-type;
+        }
+        .tc-right-line {
+            animation: tc-right-line-from-bottom $animation-time $animation-type;
+        }
+        .tc-circle-bottom-right {
+            animation: tc-circle-zoom $animation-time $animation-type;
+        }
+    }
+}

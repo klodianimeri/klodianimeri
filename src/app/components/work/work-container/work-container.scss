@@ -1,0 +1,26 @@
+@import "./../_core.scss";
+work-container {
+    display: block;
+    margin: 160px 15px 600px 15px;
+    .full-height {
+        height: 100%;
+    }
+    .middle-line {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        border-left: 1px solid #fff;
+        z-index: 31;
+        @include media-breakpoint-up(sm) {}
+        @include media-breakpoint-up(md) {
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include media-breakpoint-up(lg) {}
+        @include media-breakpoint-up(xl) {}
+    }
+}

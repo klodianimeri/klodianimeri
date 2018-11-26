@@ -1,0 +1,29 @@
+@import "./../_core.scss";
+tc-code {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    @include tc-padding-base;
+    pre {
+        display: inline-block;
+        color: inherit;
+        font-size: 0.6rem;
+        white-space: pre-wrap;
+        @include media-breakpoint-up(sm) {
+            font-size: 0.7rem;
+        }
+        @include media-breakpoint-up(md) {
+            font-size: 1rem;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 1.05rem;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 1.1rem;
+        }
+    }
+}

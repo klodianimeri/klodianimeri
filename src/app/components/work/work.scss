@@ -1,0 +1,38 @@
+@import "./_core.scss";
+work {
+    display: block;
+    font-size: 1rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 6px;
+    border-top: 1px solid white;
+    transition: color 0.32s ease-out;
+    &.active {
+        border-top: 1px solid $brand-primary;
+        color: $brand-primary;
+    }
+    &:hover {
+        cursor: initial;
+    }
+    .work-title {
+        font-size: 0.8rem;
+    }
+    @include media-breakpoint-up(sm) {}
+    @include media-breakpoint-up(md) {
+        width: 50%;
+        &.work-right {
+            text-align: right;
+            left: 50%;
+        }
+        .work-technologies {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+    }
+    @include media-breakpoint-up(lg) {}
+    @include media-breakpoint-up(xl) {}
+}

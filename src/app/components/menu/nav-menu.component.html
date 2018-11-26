@@ -1,0 +1,14 @@
+<div class="nav-menu-wrapper">
+    <div class="nav-menu-bar">
+        <div class="nav-menu-logo" (click)="hideNavMenus()">
+            <ng-content select="menu-logo-item"></ng-content>
+        </div>
+        <div class="nav-menu-bars" (click)="onNavBarsClick()">
+            <ng-content select="nav-menu-bars-item"></ng-content>
+        </div>
+    </div>
+</div>
+
+<div class="nav-menu-items" [@navItems]="_isOpen">
+    <ng-content select="nav-menu-item"></ng-content>
+</div>

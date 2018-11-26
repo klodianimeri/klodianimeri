@@ -1,0 +1,18 @@
+@import "./../_global";
+
+:host{
+    @include nav-menu-item-base;
+    @include nav-menu-item-logo-padding;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+
+    & > img{
+        max-height: 35px;
+    }
+
+    &:hover{
+        background-color: darken($color: $brand-primary, $amount: 3);
+    }
+}

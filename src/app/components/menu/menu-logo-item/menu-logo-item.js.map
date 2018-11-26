@@ -1,0 +1,1 @@
+{"version":3,"file":"menu-logo-item.js","sourceRoot":"","sources":["menu-logo-item.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAIO,eAAe,CAAC,CAAA;AAQvB;IAAA;IACA,CAAC;IAPD;QAAC,gBAAS,CAAC;YACP,QAAQ,EAAE,MAAM,CAAC,EAAE;YACnB,QAAQ,EAAE,gBAAgB;YAC1B,WAAW,EAAE,uBAAuB;YACpC,SAAS,EAAE,CAAC,sBAAsB,CAAC;SACtC,CAAC;;gCAAA;IAEF,+BAAC;AAAD,CAAC,AADD,IACC;AADY,gCAAwB,2BACpC,CAAA"}

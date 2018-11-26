@@ -1,0 +1,43 @@
+@import "./../_core.scss";
+visible-date {
+    display: block;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.6rem;
+    background-color: black;
+    z-index: 39;
+    transform: translateY(-30px);
+    .circle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 12px;
+        height: 12px;
+        border: 1px solid $brand-primary;
+        border-radius: 50%;
+        transform: translateY(24px) translateX(6px);
+        background-color: black;
+        @include media-breakpoint-up(sm) {}
+        @include media-breakpoint-up(md) {
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            transform: translateY(24px) translateX(0px);
+        }
+        @include media-breakpoint-up(lg) {}
+        @include media-breakpoint-up(xl) {}
+    }
+    @include media-breakpoint-up(sm) {}
+    @include media-breakpoint-up(md) {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include media-breakpoint-up(lg) {}
+    @include media-breakpoint-up(xl) {}
+}

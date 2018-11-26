@@ -1,0 +1,103 @@
+@import "./../_core.scss";
+@keyframes blu-overlay-move {
+    0%,
+    15% {
+        left: -100%;
+    }
+    45%,
+    65% {
+        left: 0;
+    }
+    85%,
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes name-color {
+    0%,
+    10% {
+        color: $brand-primary;
+    }
+    45%,
+    65% {
+        color: white;
+    }
+    90%,
+    100% {
+        color: $brand-primary;
+    }
+}
+
+home-page {
+    display: block;
+    padding-bottom: 25px;
+    .v-center-content {
+        height: 100%;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .tech-card {
+        min-height: 600px;
+        height: 100vh;
+    }
+    .hi-there {
+        margin-bottom: 65px;
+        font-size: 1.2rem;
+        @include media-breakpoint-up(sm) {}
+        @include media-breakpoint-up(md) {
+            font-size: 1.4rem;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 1.7rem;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 2.4rem;
+        }
+    }
+    .presantation {
+        font-size: 1.2rem;
+        @include media-breakpoint-up(sm) {}
+        @include media-breakpoint-up(md) {
+            font-size: 1.4rem;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 1.7rem;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 2.4rem;
+        }
+        .name {
+            display: inline-block;
+            vertical-align: bottom;
+            position: relative;
+            overflow: hidden;
+            animation: name-color 4s ease-out infinite;
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: transparentize($brand-primary, 0.32);
+                z-index: -1;
+                animation: blu-overlay-move 4s ease-in infinite;
+            }
+        }
+    }
+    .profession {
+        font-size: 1.1rem;
+        @include media-breakpoint-up(sm) {}
+        @include media-breakpoint-up(md) {
+            font-size: 1.3rem;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 1.6rem;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 1.8rem;
+        }
+    }
+}

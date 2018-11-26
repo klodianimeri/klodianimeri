@@ -1,0 +1,19 @@
+technologies-page {
+    .v-center-content {
+        height: 100%;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .inner-card {
+        position: relative;
+        padding: 40px;
+    }
+    .tech-card {
+        min-height: 100vh;
+    }
+    .tech-code {
+        font-weight: bold;
+    }
+}

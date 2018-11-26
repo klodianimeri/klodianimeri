@@ -1,0 +1,55 @@
+@import "./../_global";
+nav-menu-item {
+    @include nav-menu-item-base;
+    position: relative;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    overflow: hidden;
+    color: transparentize($color: black, $amount: 0.3);
+    padding: 14px 21px;
+    transition: color 0.23s ease-in;
+    flex: 1;
+    align-self: stretch;
+    letter-spacing: 0.1rem;
+    @include media-breakpoint-up(sm) {
+        font-size: 1.4rem;
+    }
+    @include media-breakpoint-up(md) {
+        font-size: 1.5rem;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 2.6rem;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 3.2rem;
+    }
+    .background-overlay {
+        z-index: -1;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: opacity 0.31s ease-out;
+        background-color: transparentize($color: darken($color: $brand-primary, $amount: 10), $amount: 0.77);
+    }
+    &.active {
+        color: $brand-white;
+        &:hover {
+            border-color: transparent;
+            color: $brand-white;
+            .background-overlay {
+                opacity: 0;
+            }
+        }
+    }
+    &:hover {
+        color: black;
+        border-color: transparent;
+        .background-overlay {
+            opacity: 1;
+        }
+    }
+}

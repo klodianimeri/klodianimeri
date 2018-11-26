@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-6" [class.push-md-6]="reverse">
+            <div class="full-height" [@cardState]="_cardState">
+                <ng-content select="tc-main"></ng-content>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 tc-code-col" [class.pull-md-6]="reverse">
+            <div class="full-height" [@codeState]="_codeState">
+                <ng-content select="tc-code"></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

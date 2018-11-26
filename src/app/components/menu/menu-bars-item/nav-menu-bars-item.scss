@@ -1,0 +1,13 @@
+@import "./../_global";
+
+:host{
+    position: relative;
+    overflow: hidden;
+    min-width: 15px;
+    @include nav-menu-item-base;
+    @include nav-menu-bars-item-padding;
+
+    &:hover{
+        background-color: darken($color: $brand-primary, $amount: 3);
+    }
+}

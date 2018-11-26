@@ -1,0 +1,122 @@
+@import './_global';
+nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: $nav-menu-item-margin-bottom;
+    z-index: 2001;
+    .nav-menu-wrapper {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        .nav-menu-bar {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            justify-content: space-between;
+            z-index: $nav-menu-item-z-index;
+            padding: 0;
+            background-color: $brand-primary;
+            border-bottom: 1px solid transparent;
+            background: linear-gradient(darken($color: $brand-primary, $amount: 1), $brand-primary);
+            /* Standard syntax */
+            box-shadow: 1px 1px 3px black;
+            transition: border-color 1.87s ease-in;
+            .nav-menu-bars {
+                display: flex;
+                .close-icon {
+                    display: none;
+                }
+            }
+            .nav-menu-logo {
+                display: flex;
+            }
+        }
+    }
+    .nav-menu-items {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: transparentize($color: $brand-primary, $amount: 0.01);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: $nav-menu-item-margin-bottom + 54;
+        z-index: $nav-menu-item-z-index - 1;
+        transform: translateY(-100%);
+        @include media-breakpoint-up(sm) {
+            flex-direction: row;
+            padding-top: $nav-menu-item-margin-bottom + 60;
+        }
+        .submenu {
+            font-size: 0.55rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 40px;
+            border-top: 1px solid darken($color: $brand-primary, $amount: 0.88);
+            background-color: darken($color: $brand-primary, $amount: 1.42);
+            @include media-breakpoint-up(sm) {
+                font-size: 0.75rem;
+            }
+        }
+    }
+    &.open {
+        .nav-menu-wrapper {
+            .nav-menu-bar {
+                border-bottom: 1px solid transparentize($color: black, $amount: 0.98);
+                .nav-menu-bars {
+                    .open-icon {
+                        display: none;
+                    }
+                    .close-icon {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    div.search-bar {
+        @include nav-menu-item-base;
+    }
+    div.nav-menu-row {
+        display: flex;
+        flex-direction: row;
+    }
+    &:hover {
+        .active {
+            border-bottom-color: transparent;
+        }
+    }
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    &.transparent {
+        color: white!important;
+        background-color: transparent;
+        border-bottom-color: transparent;
+        margin-bottom: 0;
+        nav-menu-item {
+            color: white!important;
+            text-shadow: 1px 1px 2px transparentize($color: black, $amount: 0.78);
+        }
+    }
+    &.no-margin-bottom {
+        margin-bottom: 0;
+    }
+    &.no-border-bottom {
+        border-bottom: 0;
+    }
+}

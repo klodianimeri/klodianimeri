@@ -1,0 +1,77 @@
+@keyframes kmove {
+    0%,
+    30% {
+        transform: translateX(0);
+    }
+    40%,
+    90% {
+        transform: translateX(25%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes imove {
+    0%,
+    30% {
+        transform: translateX(0);
+    }
+    40%,
+    90% {
+        transform: translateX(-22%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes groupmove {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+    }
+    60% {
+        transform: scale(0.4) rotate(0deg);
+    }
+    80% {
+        transform: scale(0.4) rotate(360deg);
+    }
+    90%,
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+logo {
+    display: block;
+    min-height: 500px;
+    height: 100vh;
+    .logo-wrapper {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        svg#svg_logo {
+            height: 40%;
+            max-width: 100%;
+            width: auto;
+            #logo_group {
+                animation: groupmove 5s infinite reverse;
+                transform-origin: 50% 50%;
+            }
+            #k {
+                animation: kmove 5s infinite reverse;
+                transform-origin: 50% 50%;
+            }
+            #i {
+                animation: imove 5s infinite reverse;
+                transform-origin: 50% 50%;
+            }
+        }
+    }
+}

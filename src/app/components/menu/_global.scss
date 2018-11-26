@@ -1,0 +1,30 @@
+@import '../_index.scss';
+@mixin nav-menu-item-base {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+@mixin nav-menu-item-logo-padding {
+    padding: 0px 25px;
+}
+
+@mixin nav-menu-item-base-padding {
+    padding: 15px 25px;
+}
+
+@mixin nav-menu-bars-item-padding {
+    padding: 18px 20px;
+    @include media-breakpoint-up(sm) {
+        padding: 22px 30px;
+    }
+}
+
+$nav-menu-item-z-index: 2001;
+$nav-menu-item-margin-bottom: 0px;
